@@ -12,7 +12,7 @@ import {
 
 const ARTICLES = [
   {
-    slug: "o-corpo-comeca-a-cobrar",
+    slug: "o-corpo-comeca-a-cobrar-o-que-a-mente-ignorou",
     title: "O corpo começa a cobrar o que a mente ignorou",
     category: "Burnout",
     excerpt:
@@ -22,7 +22,7 @@ const ARTICLES = [
       "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&q=80&w=1500", // Silhouette by window
   },
   {
-    slug: "adoecendo-enquanto-funciona",
+    slug: "voce-pode-estar-funcionando-e-adoecendo-ao-mesmo-tempo",
     title: "Você pode estar funcionando e adoecendo ao mesmo tempo",
     category: "Sobrecarga Mental",
     excerpt:
@@ -32,7 +32,7 @@ const ARTICLES = [
       "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1500", // Motion blur executive
   },
   {
-    slug: "quem-cuida-de-quem-resolve",
+    slug: "quem-cuida-de-quem-resolve-os-problemas-de-todo-mundo",
     title: "Quem cuida de quem resolve os problemas de todo mundo?",
     category: "Rotina e Pressão",
     excerpt:
@@ -52,7 +52,7 @@ const ARTICLES = [
       "https://images.unsplash.com/photo-1541123356219-284ebe98ae3b?auto=format&fit=crop&q=80&w=1500", // Unmade minimalistic bed
   },
   {
-    slug: "como-o-trabalho-invade-sua-vida",
+    slug: "como-o-trabalho-invade-sua-vida-sem-voce-perceber",
     title: "Como o trabalho invade sua vida sem você perceber",
     category: "Relações e Trabalho",
     excerpt:

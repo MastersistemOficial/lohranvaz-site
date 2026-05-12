@@ -11,7 +11,7 @@ import {
 } from "../components/Shared";
 
 const ARTICLES_DB: Record<string, any> = {
-  "o-corpo-comeca-a-cobrar": {
+  "o-corpo-comeca-a-cobrar-o-que-a-mente-ignorou": {
     title: "O corpo começa a cobrar o que a mente ignorou",
     category: "Burnout",
     readTime: "5 min de leitura",
@@ -85,7 +85,7 @@ const ARTICLES_DB: Record<string, any> = {
       Talvez ele esteja tentando avisar que alguma parte sua ficou tempo demais sem cuidado.</p>
     `,
   },
-  "adoecendo-enquanto-funciona": {
+  "voce-pode-estar-funcionando-e-adoecendo-ao-mesmo-tempo": {
     title: "Você pode estar funcionando e adoecendo ao mesmo tempo",
     category: "Sobrecarga Mental",
     readTime: "5 min de leitura",
@@ -147,7 +147,7 @@ const ARTICLES_DB: Record<string, any> = {
       <p>Às vezes significa apenas que você se acostumou a ignorar sinais importantes demais.</p>
     `,
   },
-  "quem-cuida-de-quem-resolve": {
+  "quem-cuida-de-quem-resolve-os-problemas-de-todo-mundo": {
     title: "Quem cuida de quem resolve os problemas de todo mundo?",
     category: "Rotina e Pressão",
     readTime: "4 min de leitura",
@@ -259,7 +259,7 @@ const ARTICLES_DB: Record<string, any> = {
       <p>É aquela em que você consegue sustentar suas responsabilidades sem perder a si mesmo no processo.</p>
     `,
   },
-  "como-o-trabalho-invade-sua-vida": {
+  "como-o-trabalho-invade-sua-vida-sem-voce-perceber": {
     title: "Como o trabalho invade sua vida sem você perceber",
     category: "Relações e Trabalho",
     readTime: "5 min de leitura",
