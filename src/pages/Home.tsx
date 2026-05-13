@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowRight,
@@ -28,7 +29,6 @@ export default function Home() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Lohran Vaz | Psicólogo Clínico";
     window.scrollTo(0, 0);
   }, []);
 
@@ -201,6 +201,25 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Lohran Vaz | Psicólogo Clínico</title>
+        <meta name="title" content="Lohran Vaz | Psicólogo Clínico" />
+        <meta name="description" content="Psicologia para mentes exigidas e vidas sobrecarregadas. Atendimento psicológico técnico, contemporâneo e humanizado para ansiedade, burnout, TDAH e sobrecarga emocional." />
+        <link rel="canonical" href="https://lohranvaz.com.br" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://lohranvaz.com.br" />
+        <meta property="og:title" content="Lohran Vaz | Psicólogo Clínico" />
+        <meta property="og:description" content="Psicologia para mentes exigidas e vidas sobrecarregadas." />
+        <meta property="og:image" content="https://lohranvaz.com.br/og-image.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://lohranvaz.com.br" />
+        <meta name="twitter:title" content="Lohran Vaz | Psicólogo Clínico" />
+        <meta name="twitter:description" content="Psicologia para mentes exigidas e vidas sobrecarregadas." />
+        <meta name="twitter:image" content="https://lohranvaz.com.br/og-image.jpg" />
+      </Helmet>
+
       {/* Navbar */}
       <header className="fixed top-0 w-full z-40 glass-nav transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">

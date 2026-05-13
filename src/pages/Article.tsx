@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link, useParams } from "react-router-dom";
@@ -334,16 +335,15 @@ export default function Article() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (article) {
-      document.title = `${article.title} | Lohran Vaz`;
-    } else {
-      document.title = "Artigo não encontrado | Lohran Vaz";
-    }
-  }, [slug, article]);
+  }, [slug]);
 
   if (!article) {
     return (
       <div className="min-h-screen flex items-center justify-center p-6 text-center">
+        <Helmet>
+          <title>Artigo não encontrado | Lohran Vaz</title>
+          <meta name="robots" content="noindex" />
+        </Helmet>
         <div>
           <h1 className="text-4xl font-heading mb-4">Artigo não encontrado.</h1>
           <Link
@@ -359,6 +359,26 @@ export default function Article() {
 
   return (
     <>
+      <Helmet>
+        <title>{article.title} | Lohran Vaz</title>
+        <meta name="title" content={`${article.title} | Lohran Vaz`} />
+        {/* Usamos textContent de um div temporário para extrair texto do HTML ou usar título */}
+        <meta name="description" content={article.title} />
+        <link rel="canonical" href={`https://lohranvaz.com.br/artigos/${slug}`} />
+        
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://lohranvaz.com.br/artigos/${slug}`} />
+        <meta property="og:title" content={`${article.title} | Lohran Vaz`} />
+        <meta property="og:description" content={article.title} />
+        <meta property="og:image" content={article.image || "https://lohranvaz.com.br/og-image.jpg"} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={`https://lohranvaz.com.br/artigos/${slug}`} />
+        <meta name="twitter:title" content={`${article.title} | Lohran Vaz`} />
+        <meta name="twitter:description" content={article.title} />
+        <meta name="twitter:image" content={article.image || "https://lohranvaz.com.br/og-image.jpg"} />
+      </Helmet>
+
       <header className="fixed top-0 w-full z-40 glass-nav transition-all duration-300 border-b border-primary/5">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
           <Link to="/" className="active:scale-[0.98] transition-all">

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
@@ -67,11 +68,30 @@ export default function BlogIndex() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Artigos | Lohran Vaz - Psicólogo Clínico";
+    window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>Artigos | Lohran Vaz - Psicólogo Clínico</title>
+        <meta name="title" content="Artigos | Lohran Vaz - Psicólogo Clínico" />
+        <meta name="description" content="Leia artigos sobre ansiedade, burnout, TDAH e psicologia clínica." />
+        <link rel="canonical" href="https://lohranvaz.com.br/artigos" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://lohranvaz.com.br/artigos" />
+        <meta property="og:title" content="Artigos | Lohran Vaz - Psicólogo Clínico" />
+        <meta property="og:description" content="Leia artigos sobre ansiedade, burnout, TDAH e psicologia clínica." />
+        <meta property="og:image" content="https://lohranvaz.com.br/og-image.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://lohranvaz.com.br/artigos" />
+        <meta name="twitter:title" content="Artigos | Lohran Vaz - Psicólogo Clínico" />
+        <meta name="twitter:description" content="Leia artigos sobre ansiedade, burnout, TDAH e psicologia clínica." />
+        <meta name="twitter:image" content="https://lohranvaz.com.br/og-image.jpg" />
+      </Helmet>
+
       <header className="fixed top-0 w-full z-40 glass-nav transition-all duration-300 border-b border-primary/5">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
           <Link to="/" className="active:scale-[0.98] transition-all">
